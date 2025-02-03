@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="food.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="image/fevi-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>FOODIES 😍</title>
+</head>
+<body>
+	<header id="dynamic">
+		<div class="co_subheader">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-4">
+						<div class="left-part d-flex align-items-center">
+							<span>follow on: </span>
+							<ul class="social-link">
+						    	<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+		                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+		                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="logo">
+						<h1>FOOD CAFE</h1>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="right-part">
+							<ul class="d-flex align-items-center">
+								<li>
+									<div class="language">
+										<i class="fa-solid fa-earth-americas"></i>
+										<select>
+											<option>English</option>
+											<option>Italian</option>
+											<option>France</option>
+											<option>Spanish</option>
+											<option>Poland</option>
+											<option>German</option>
+										</select>
+									</div>
+							    </li>
+							    <li><a class="login-btn" onclick="loginshow()"> login</a></li>
+                                <ul> 
+                                    <div class="dark-mode-toggle">
+                                        <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                                        <label for="darkModeToggle">🌙</label>
+                                    </div>
+                                  </ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="co_header">
+			<div class="container">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-lg-12">
+						<div class="menu">
+							<ul>
+						<li onclick="show1(); show11();"><a href="#">home</a>
+							<ul class="dropdown dropdown-1">
+                                <li>
+                                    <a href="#">home1</a>
+                                    <a href="#">home2</a>
+                                    <a href="#">home3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="show2(); show21()"><a href="#">about us</a>
+							<ul class="dropdown dropdown-2">
+                                <li>
+                                    <a href="#">who we are</a>
+                                    <a href="#">Team</a>
+                                    <a href="#">FAQ</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="show3(); show31()"><a href="#">services</a>
+							<ul class="dropdown dropdown-3">
+                                <li>
+                                    <a href="#">service1</a>
+                                    <a href="#">service2</a>
+                                    <a href="#">service3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="show4(); show41()"><a href="#">gallery</a>
+							<ul class="dropdown dropdown-4">
+                                <li>
+                                    <a href="#">gallery1</a>
+                                    <a href="#">gallery2</a>
+                                    <a href="#">gallery3</a>
+                                </li>
+                            </ul>
+						</li>
+						<li onclick="show5(); show51()"><a href="#">contact us</a>
+                            <ul class="dropdown dropdown-5">
+                                <li>
+                                    <a href="#">contact1</a>
+                                    <a href="#">contact2</a>
+                                    <a href="#">contact3</a>
+                                </li>
+                            </ul>
+						</li>
+						
+					</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+        
+    </header>
+    <div class="co_banner">
+    	<div class="container">
+	    	<div class="banner-slider">
+	    		<div class="image-continer">
+	    			<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80" id="image1" class="active">
+	    			<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" id="image2">
+	    			<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80" id="image3">
+	    		</div>
+	    		<button id="prev" onclick="prev1()"><i class="fa-solid fa-chevron-left"></i></button>
+	    		<button id="next" onclick="next1()"><i class="fa-solid fa-chevron-right"></i></button>
+	    	</div>
+	    </div>
+    </div>
+    <div class="co_tab">
+    	<div class="container">
+    		<div class="all-btn">
+    			<button onclick="home()">home</button>
+    			<button onclick="service()">service</button>
+    			<button onclick="contact()">contact</button>
+    		</div>
+    		<div class="image-continer1">
+    			<img src="https://www.tastingtable.com/img/gallery/what-does-authentic-food-actually-mean/l-intro-1667222326.jpg" class="active" id="image4">
+    <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=800" id="image5">
+    <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800" id="image6">
+    		</div>
+    	</div>
+    </div>
+    <div class="co_tab1">
+    	<div class="container">
+    		<div class="all-btn">
+    			<button onclick="ShowFood('box1')">coffee</button>
+    			<button onclick="ShowFood('box2')">colddrink</button>
+    			<button onclick="ShowFood('box3')">fastfood</button>
+    			<button onclick="ShowFood('box4')">Tea</button>
+    			<button onclick="ShowFood('box5')">all</button>
+    		</div>	
+    		<div class="image-continer1">
+    			<div id="box1" class="tabing active">
+    				<div class="card1">
+    <img src="https://plus.unsplash.com/premium_photo-1674327105076-36c4419864cf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwcHVjY2lubyUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D">
+    <h4>Cappuccino</h4>
+</div>
+<div class="card1">
+    <img src="https://www.acouplecooks.com/wp-content/uploads/2020/09/Latte-Art-066s.jpg">
+    <h4>Espresso</h4>
+</div>
+<div class="card1">
+    <img src="https://coffeebros.com/cdn/shop/articles/latte-vs-flat-white-all-differences-explained.jpg?v=1676581028">
+    <h4>Caffe Latte</h4>
+</div>
+<div class="card1">
+    <img src="https://www.acouplecooks.com/wp-content/uploads/2021/08/French-Press-Cold-Brew-011.jpg">
+    <h4>Cold brew</h4>
+</div>
+</div>
+<div id="box2" class="tabing">
+<div class="card1">
+    <img src="https://cdn.jhattse.com/resize?width=384&url=https://jhattse.com/api/v1/file/?key=images/product/114716/108536/NZC2RYL0-Sprite-.jpeg.jpg&quality=75&type=webp">
+    <h4>Sprite</h4>
+</div>
+<div class="card1">
+    <img src="https://images.cnbctv18.com/wp-content/uploads/2022/02/thums-up-1.png">
+    <h4>Thums Up</h4>
+</div>
+<div class="card1">
+    <img src="https://www.shutterstock.com/shutterstock/photos/1481415659/display_1500/stock-photo-poznan-pol-aug-a-can-and-a-glass-of-pepsi-a-carbonated-soft-drink-produced-and-1481415659.jpg">
+    <h4>Pepsi</h4>
+</div>
+<div class="card1">
+    <img src="https://static.vecteezy.com/system/resources/previews/029/612/562/large_2x/kyiv-ukraine-july-7-2023-mirinda-orange-drink-with-many-oranges-on-colorful-background-free-photo.JPG">
+    <h4>Mirinda Orange</h4>
+</div>
+</div>
+<div id="box3" class="tabing">
+<div class="card1">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/99/44/8e/kfc-faxafeni.jpg?w=800&h=-1&s=1">
+    <h4>KFC</h4>
+</div>
+<div class="card1">
+    <img src="https://www.cookwithmanali.com/wp-content/uploads/2018/04/Vada-Pav-500x375.jpg">
+    <h4>Vadapav</h4>
+</div>
+<div class="card1">
+    <img src="https://xoxobella.com/wp-content/uploads/2021/07/gluten_free_heart_shaped_pizza_valentine-3.jpg">
+    <h4>Pizza</h4>
+</div>
+<div class="card1">
+    <img src="https://loveandgoodstuff.com/wp-content/uploads/2020/08/classic-ground-beef-tacos-1200x1200.jpg">
+    <h4>Taco</h4>
+</div>
+</div>
+<div id="box4" class="tabing">
+<div class="card1">
+    <img src="https://images.ctfassets.net/e8bhhtr91vp3/4v9X0NPdU6zsq1UwHXfYpV/01f6e8e5099ed9a7a9d7bf336d76b1fd/image.png?w=1600&q=60">
+    <h4>black tea</h4>
+</div>
+<div class="card1">
+    <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/8468/conversions/Tea-thumb.jpg">
+    <h4>green tea</h4>
+</div>
+<div class="card1">
+    <img src="https://www.guardian.in/cdn/shop/articles/23b991678537b222256d97668f795167.jpg?v=1685010324&width=2048">
+    <h4>herbal tea</h4>
+</div>
+<div class="card1">
+    <img src="https://teashop.com/cdn/shop/files/oolong-salted-caramel.jpg?v=1720781664&width=1000">
+    <h4>oolong tea</h4>
+</div>
+</div>
+<div id="box5" class="tabing">
+<div class="card1">
+    <img src="https://plus.unsplash.com/premium_photo-1674327105076-36c4419864cf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwcHVjY2lubyUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D">
+    <h4>Cappuccino</h4>
+</div>
+<div class="card1">
+    <img src="https://www.acouplecooks.com/wp-content/uploads/2020/09/Latte-Art-066s.jpg">
+    <h4>Espresso</h4>
+</div>
+<div class="card1">
+    <img src="https://coffeebros.com/cdn/shop/articles/latte-vs-flat-white-all-differences-explained.jpg?v=1676581028">
+    <h4>Caffe Latte</h4>
+</div>
+<div class="card1">
+    <img src="https://www.acouplecooks.com/wp-content/uploads/2021/08/French-Press-Cold-Brew-011.jpg">
+    <h4>Cold brew</h4>
+</div>
+<div class="card1">
+    <img src="https://cdn.jhattse.com/resize?width=384&url=https://jhattse.com/api/v1/file/?key=images/product/114716/108536/NZC2RYL0-Sprite-.jpeg.jpg&quality=75&type=webp">
+    <h4>Sprite</h4>
+</div>
+<div class="card1">
+    <img src="https://images.cnbctv18.com/wp-content/uploads/2022/02/thums-up-1.png">
+    <h4>Thums Up</h4>
+</div>
+<div class="card1">
+    <img src="https://www.shutterstock.com/shutterstock/photos/1481415659/display_1500/stock-photo-poznan-pol-aug-a-can-and-a-glass-of-pepsi-a-carbonated-soft-drink-produced-and-1481415659.jpg">
+    <h4>Pepsi</h4>
+</div>
+<div class="card1">
+    <img src="https://static.vecteezy.com/system/resources/previews/029/612/562/large_2x/kyiv-ukraine-july-7-2023-mirinda-orange-drink-with-many-oranges-on-colorful-background-free-photo.JPG">
+    <h4>Mirinda Orange</h4>
+</div>
+<div class="card1">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/99/44/8e/kfc-faxafeni.jpg?w=800&h=-1&s=1">
+    <h4>KFC</h4>
+</div>
+<div class="card1">
+    <img src="https://www.cookwithmanali.com/wp-content/uploads/2018/04/Vada-Pav-500x375.jpg">
+    <h4>Vadapav</h4>
+</div>
+<div class="card1">
+    <img src="https://xoxobella.com/wp-content/uploads/2021/07/gluten_free_heart_shaped_pizza_valentine-3.jpg">
+    <h4>Pizza</h4>
+</div>
+<div class="card1">
+    <img src="https://loveandgoodstuff.com/wp-content/uploads/2020/08/classic-ground-beef-tacos-1200x1200.jpg">
+    <h4>Taco</h4>
+</div>
+<div class="card1">
+    <img src="https://images.ctfassets.net/e8bhhtr91vp3/4v9X0NPdU6zsq1UwHXfYpV/01f6e8e5099ed9a7a9d7bf336d76b1fd/image.png?w=1600&q=60">
+    <h4>black tea</h4>
+</div>
+<div class="card1">
+    <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/8468/conversions/Tea-thumb.jpg">
+    <h4>green tea</h4>
+</div>
+<div class="card1">
+    <img src="https://www.guardian.in/cdn/shop/articles/23b991678537b222256d97668f795167.jpg?v=1685010324&width=2048">
+    <h4>herbal tea</h4>
+</div>
+<div class="card1">
+    <img src="https://teashop.com/cdn/shop/files/oolong-salted-caramel.jpg?v=1720781664&width=1000">
+    <h4>oolong tea</h4>
+</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="contact">
+    	<div class="container">
+    		<div class="row fix-contact">
+                <div class="col-lg-6 col-md-12 col-12 set-contact">
+                    <h2>Get in touch</h2>
+                    <form class="form1 row" onsubmit="return validateForm()">                       
+                        <div class="col-lg-6">
+                            <div class="part-1">
+                                <input type="text" placeholder="Name" name="name" id="name">
+                                <div id="error1"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="part-1">
+                                <input type="text" placeholder="Email" name="email" id="email">
+                                <div id="error2"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="part-1">
+                                <input type="Password" placeholder="Password" id="pwd">
+                                <div id="error3"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="part-1">
+                                <textarea placeholder="Your Message" name="description" id="description" rows="7" cols="30"></textarea>
+                                <div id="error4"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sub1">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                
+            </div>
+    	</div>
+    </div>
+    <div class="co_mouse">
+        <div class="container">
+            <div class="co_main">
+                <div class="button-main">
+                    <button onmouseover="story()">our story</button>
+                    <button onmouseover="mission()">mission</button>
+                    <button>vision</button>
+                </div>
+                <div class="about-main">
+                    <div class="about about1 active">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felisAdipiscing enim eu turpis egestas pretium aenean pharetra magna. Adipiscing elit pellentesque habitant morbi tristique senectus et netus.
+                    </div>
+                    <div class="about about2">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. 
+
+                    </div>
+                    <div class="about about3">
+                        Pure Chocolate. Pure Emotion. Quisque volutpat mattis eros. Nullam malesuada erat ut ki diaml ka dhuddu pochu turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felisAdipiscing enim eu turpis egestas pretium aenean pharetra magna.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    	
+    </div>
+
+    <div class="login-modal">
+    	<div class="set-contact">
+            <h2>login</h2>
+            <div class="close-icon" onclick="hide()"><i class="fa-solid fa-xmark"></i></div>
+            <form class="form1 row"> 
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="text" placeholder="Email" id="email1" onkeyup="first()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="Password" placeholder="Password" id="pwd1" onkeyup="last()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <error id="login-error"></error>
+                    
+                </div>
+                <div class="col-lg-12">
+                    <div class="sub1">
+                        <input type="submit" value="Submit" onclick="return validate()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+     
+    <script src="food.js"></script>
+
+
+</body>
+</html>
